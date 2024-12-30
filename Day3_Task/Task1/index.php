@@ -18,17 +18,17 @@ function generateTable($array) {
 
     // Loop through the array and create rows
     foreach ($array as $rowIndex => $row) {
-        // Highlight the row where track = "PHP"
+        // Highlight the row where track = "Science"
         $isPHP = (isset($row['track']) && $row['track'] === "Science");
         
         $rowStyle = $isPHP ? " style='background-color: #ADD8E6;' " : "";
 
-        // Start creating a new table row with optional styling
+        // Start creating a new table row 
         echo "<tr$rowStyle>";
 
-        // Loop through each cell in the row and output it
+        // Loop through each cell in the row 
         foreach ($row as $key => $cell) {
-            // Use <td> (table data) for all rows (header is already handled outside)
+            // Use <td> (table data) for all rows
             echo "<td>" . htmlspecialchars($cell) . "</td>";
         }
 
@@ -38,6 +38,6 @@ function generateTable($array) {
     echo "</table>";
 }
 
-// Call the function to generate the table
+
 generateTable($students);
 ?>
